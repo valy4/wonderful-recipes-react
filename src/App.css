@@ -1,6 +1,9 @@
 .title {
-  font-size: 40px;
+  font-family: "Merriweather", serif;
   text-transform: uppercase;
+  font-weight: 700;
+  font-size: 80px;
+  color: #f52878;
 }
 .App {
   display: flex;
@@ -10,4 +13,41 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+}
+#search-bar {
+  border-radius: 20px;
+  display: block;
+  width: 70%;
+  border: solid springgreen 2px;
+  height: 50px;
+  margin-top: 25px;
+  font-size: larger;
+  cursor: pointer;
+}
+input {
+  text-decoration: none;
+  color: springgreen;
+  border-width: 0px;
+}
+#search-bar:hover {
+  background-color: beige;
+}
+.recipe-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.recipe-btn {
+  border-radius: 20px;
+  border: solid #f52878 1px;
+  color: white;
+  background-color: #f52878;
+  cursor: pointer;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 10px;
+}
+.recipe-btn:hover {
+  background-color: #e90b62;
 }
