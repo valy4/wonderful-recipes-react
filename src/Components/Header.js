@@ -4,14 +4,14 @@ import logo from "../Images/logo.png"
 
 function Header() {
   return (
-    <>
+    <header className="box">
       <a href="#">
         <img class="logo" src={logo} />
       </a>
       <nav>
         <ul class="nav-list">
           <li class="nav-item">
-            <a class="header-link" >Home</a>
+            <a class="header-link-home" >Home</a>
           </li>
           <li class="nav-item">
             <a class="header-link" >Recipes</a>
@@ -22,14 +22,14 @@ function Header() {
           <li class="nav-item">
             <a class="header-link" >Contact</a>
           </li>
-          <div class="nav-sign-in">
-            <li class="nav-item">
-              <a class="header-link">Sign In</a>
-            </li>
-          </div>
+
+          <li class="nav-item">
+            <button class="header-link-btn">Sign In</button>
+          </li>
+
         </ul>
       </nav>
-    </>
+    </header>
   )
 }
 export default Header
