@@ -47,7 +47,7 @@ function MainContent() {
         <button className="search-btn" onClick={getRecipes}>Search</button>
       </div>
       <div className="container-recipes">
-        {recipes.map(recipe => <RecipeCard title={recipe.title} image={recipe.image} ></RecipeCard>)}
+        {recipes.map(recipe => <RecipeCard title={recipe.title} image={recipe.image} id={recipe.id} ></RecipeCard>)}
       </div>
     </div >
   )

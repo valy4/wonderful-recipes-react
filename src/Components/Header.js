@@ -1,35 +1,43 @@
 import React from "react"
 import "../App.css"
 import logo from "../Images/logo.png"
+import {
+  Link
+} from "react-router-dom";
 
 function Header() {
   return (
     <header className="box">
       <a href="#">
-        <img class="logo" src={logo} />
+        <img className="logo" src={logo} />
       </a>
       <nav>
-        <ul class="nav-list">
-          <li class="nav-item">
-            <a class="header-link-home" >Home</a>
+        <ul className="nav-list">
+          <li className="nav-item">
+            <Link className="header-link-home" to="/">Home</Link>
           </li>
-          <li class="nav-item">
-            <a class="header-link" >Recipes</a>
-          </li>
-          <li class="nav-item">
-            <a class="header-link" >Deserts</a>
-          </li>
-          <li class="nav-item">
-            <a class="header-link" >Contact</a>
+          <li className="nav-item">
+            <Link className="header-link-home" to="/about">About</Link>
           </li>
 
-          <li class="nav-item">
-            <button class="header-link-btn">Sign In</button>
+          <li className="nav-item">
+            <a className="header-link" >Recipes</a>
+          </li>
+          <li className="nav-item">
+            <a className="header-link" >Deserts</a>
+          </li>
+          <li className="nav-item">
+            <a className="header-link" >Contact</a>
+          </li>
+
+
+          <li className="nav-item-btn">
+            <button className="header-link-btn">Sign In</button>
           </li>
 
         </ul>
       </nav>
-    </header>
+    </header >
   )
 }
 export default Header

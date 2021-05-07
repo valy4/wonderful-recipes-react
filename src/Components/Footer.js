@@ -5,24 +5,24 @@ import logo from "../Images/logo.png"
 function Footer() {
   return (
     <footer>
-      <div class="footer-title">
-        <p class="footer-link">Wonderful Recipes</p>
+      <div className="footer-title">
+        <p className="footer-link">Wonderful Recipes</p>
         <a href="#">
-          <img class="logo" src={logo} />
+          <img className="logo" src={logo} />
         </a>
       </div>
-      <div class="contact">
-        <p class="footer-link">Contact us</p>
-        <ul class="footer-list">
+      <div className="contact">
+        <p className="footer-link">Contact us</p>
+        <ul className="footer-list">
           <li>smeu.valentina33@gmail.com</li>
           <li>07405796973</li>
           <li>Beckenham</li>
           <li>London</li>
         </ul>
       </div>
-      <div class="footer-legal">
-        <p class="footer-link">Legal</p>
-        <ul class="footer-list">
+      <div className="footer-legal">
+        <p className="footer-link">Legal</p>
+        <ul className="footer-list">
           <li>Terms & Conditions</li>
           <li>FAQs</li>
           <li>Privacy Policy</li>
