@@ -11,12 +11,12 @@ import Header from "./Components/Header"
 import MainContent from "./Components/MainContent"
 import Footer from "./Components/Footer"
 import SecondMain from "./Components/SecondMain"
+import About from "./Components/About/About"
+import Contact from "./Components/Contact"
 
 
 // const callApiKey = "0bfd9699a1f041569f9c334fa5e31134"
-function About() {
-  return <h1>About</h1>
-}
+
 
 function App() {
   return (
@@ -27,6 +27,9 @@ function App() {
           <Route path="/about">
             <About />
           </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
           <Route path="/recipe/:id">
             <About />
           </Route>
@@ -34,6 +37,7 @@ function App() {
             <MainContent />
             <SecondMain />
           </Route>
+
         </Switch>
         <Footer />
       </div>

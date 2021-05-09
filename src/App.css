@@ -229,3 +229,47 @@ li {
   background-color: #e90b62;
   color: #fee9f1;
 }
+.about-photo {
+  height: 100vh;
+  background-image: url("Images/about.jpg");
+  background-size: cover;
+}
+
+.about-scris {
+  color: #e90b62;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 70px;
+  background-color: rgba(251, 251, 251, 0.3);
+  max-width: 100%;
+}
+.who-we-are {
+  font-size: 1.5rem;
+  color: #e90b62;
+  font-weight: 700;
+}
+.about-us-container {
+  display: flex;
+  margin-top: 80px;
+  margin-left: 80px;
+  margin-right: 80px;
+  background-color: #fee9f1;
+  height: 500px;
+}
+.about-us {
+  width: 50%;
+}
+.about-us-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 200px;
+}
+.partners-div {
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: #f46d00;
+}
