@@ -13,9 +13,10 @@ import Footer from "./Components/Footer"
 import SecondMain from "./Components/SecondMain"
 import About from "./Components/About/About"
 import Contact from "./Components/Contact"
+import RecipePage from "./Components/recipePage/RecipePage"
 
 
-// const callApiKey = "0bfd9699a1f041569f9c334fa5e31134"
+const callApiKey = "0bfd9699a1f041569f9c334fa5e31134"
 
 
 function App() {
@@ -31,7 +32,7 @@ function App() {
             <Contact />
           </Route>
           <Route path="/recipe/:id">
-            <About />
+            <RecipePage />
           </Route>
           <Route path="/">
             <MainContent />

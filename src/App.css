@@ -266,7 +266,7 @@ li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-left: 200px;
+  flex-grow: 1;
 }
 .partners-div {
   display: flex;

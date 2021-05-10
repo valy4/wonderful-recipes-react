@@ -3,7 +3,7 @@ import "../../App.css"
 
 function AboutCard(props) {
   return (
-    <div className="about-us-container" >
+    <div className="about-us-container" style={{ flexDirection: props.isReversed ? "row-reverse" : "row", backgroundColor: props.bkgColor }} >
       <img className="about-us" src={props.imgUrl}></img>
       <div className="about-us-right">
         <h1>{props.title}</h1>
