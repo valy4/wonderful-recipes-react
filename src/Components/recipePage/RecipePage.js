@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import styled from "styled-components"
+
+import TitleCardRecipe from "../titlesCard/TitleCardRecipe"
+
 const callApiKey = "0bfd9699a1f041569f9c334fa5e31134"
 
 function RecipePage(props) {
@@ -42,8 +45,9 @@ function RecipePage(props) {
   return (
     <div >
       <h1>RecipePage:{id}</h1>
-      <h2>{recipe.title}</h2>
-      <img src={recipe.image} />
+      <TitleCardRecipe title={recipe.title} image={recipe.image} />
+      <div><img src={recipe.image} /></div>
+
       <div>{recipe.instructions}</div>
       <div>{recipeIngredients.ingredients}</div>
 

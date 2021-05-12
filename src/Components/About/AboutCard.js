@@ -8,7 +8,7 @@ function AboutCard(props) {
       <div className="about-us-right">
         <h1>{props.title}</h1>
         <p>{props.info}</p>
-        <button className="search-btn">Find out more</button>
+        <button className="search-btn" style={{ backgroundColor: props.btnColor }}>Find out more</button>
       </div>
     </div>)
 }

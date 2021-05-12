@@ -2,7 +2,7 @@ import React from "react"
 
 function TitleCard(props) {
   return (
-    <div className="about-photo" >
+    <div className="about-photo" style={{ backgroundImage: props.isImage ? "Images/about.jpg" : "none", backgroundColor: props.bkgColor, height: props.hgt }} >
       <div className="about-scris">
         <img className="logo" src={props.logo} />
         <h1>{props.title}</h1>

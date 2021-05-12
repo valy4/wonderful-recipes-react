@@ -7,7 +7,7 @@ import logo from "../Images/logo.png"
 function Contact() {
   return (
     <div>
-      <TitleCard logo={logo} title="CONTACT US" info="We’d love to hear from you" />
+      <TitleCard logo={logo} title="CONTACT US" info="We’d love to hear from you" isImage={false} bkgColor={"#0f0000"} hgt={"300px"} />
       <div className="before-contact">
         <p >Please help us by reviewing these FAQs before you get in touch. Your question may already be answered!</p>
       </div>
