@@ -231,7 +231,6 @@ li {
 }
 .about-photo {
   height: 100vh;
-  background-image: url("Images/about.jpg");
   background-size: cover;
 }
 

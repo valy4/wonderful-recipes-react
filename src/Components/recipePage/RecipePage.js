@@ -1,70 +1,75 @@
-import React, { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
-import styled from "styled-components"
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import styled from "styled-components";
 
-import TitleCardRecipe from "../titlesCard/TitleCardRecipe"
+import TitleCardRecipe from "../titlesCard/TitleCardRecipe";
 
-const callApiKey = "0bfd9699a1f041569f9c334fa5e31134"
+const callApiKey = "0bfd9699a1f041569f9c334fa5e31134";
 
 function RecipePage(props) {
   let { id } = useParams();
-  const [recipe, setRecipe] = useState({})
-  const [recipeIngredients, setRecipeIngredients] = useState({})
+  const [recipe, setRecipe] = useState({});
+  const [recipeIngredients, setRecipeIngredients] = useState([]);
 
   useEffect(function () {
-    fetch(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${callApiKey}`)
-      .then(response => response.json())
-      .then(data => {
-        setRecipe(data)
-        console.log(data)
-      })
-    console.log("user landed on the page")
-  }, [])
+    fetch(
+      `https://api.spoonacular.com/recipes/${id}/information?apiKey=${callApiKey}`
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        setRecipe(data);
+        console.log(data);
+      });
+    console.log("user landed on the page");
+  }, []);
 
   useEffect(function () {
-    fetch(`https://api.spoonacular.com/recipes/${id}/ingredientWidget.json?apiKey=${callApiKey}`)
-      .then(response => response.json())
-      .then(data => {
-        console.log(data)
+    fetch(
+      `https://api.spoonacular.com/recipes/${id}/ingredientWidget.json?apiKey=${callApiKey}`
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data, "ingredients.data");
 
-        for (let i = 0; i < recipeIngredients.length; i++) {
-          recipe.recipeIngredients = recipeIngredients[i].name;
-          setRecipeIngredients(data)
+        setRecipeIngredients(data.ingredients);
 
-
-        }
-        console.log("user landed on the page")
-      }
-
-      )
-  }, [])
-
+        console.log("user landed on the page");
+      });
+  }, []);
 
   // console.log(data)
 
   return (
-    <div >
-      <h1>RecipePage:{id}</h1>
-      <TitleCardRecipe title={recipe.title} image={recipe.image} />
-      <div><img src={recipe.image} /></div>
+    <div>
+      <TitleCardRecipe
+        title={recipe.title}
+        isImage={true}
+        image={recipe.image}
+      />
 
       <div>{recipe.instructions}</div>
-      <div>{recipeIngredients.ingredients}</div>
+      <div>
+        {recipeIngredients.map(function (ingredient) {
+          return (
+            <IngredientContainer>
+              <p>
+                {ingredient.amount.metric.value} {ingredient.amount.metric.unit}
+              </p>
+              {" "}
+              <p>{ingredient.name}</p>
+            </IngredientContainer>
+          );
+        })}
+      </div>
 
-
-      {/* <GlutenLabel>Gluten free:{recipe.glutenFree ? "yes" : "no"}</GlutenLabel> */}
 
     </div>
-  )
-
+  );
 }
-export default RecipePage
+export default RecipePage;
 
 
 
-  // const GlutenLabel = styled.p`
-  //   font-weight:900;
-  //   color:#00b894
-
-
-
+const IngredientContainer = styled.div`
+  display: flex;
+`;
