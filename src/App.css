@@ -129,12 +129,12 @@ input {
   border-radius: 5px;
   border: solid 1px;
   color: white;
-  background-color: #ff821e;
+  background-color: #f52878;
   cursor: pointer;
   width: 100px;
 }
 .header-link-btn:hover {
-  background-color: #f46d00;
+  background-color: #f52878;
 }
 footer {
   margin-top: 150px;
