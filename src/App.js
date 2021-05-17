@@ -1,10 +1,9 @@
 import './App.css';
-import React, { useState, useEffect } from "react"
+import React from "react"
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
 import Header from "./Components/Header"
@@ -16,7 +15,7 @@ import Contact from "./Components/Contact"
 import RecipePage from "./Components/recipePage/RecipePage"
 
 
-const callApiKey = "0bfd9699a1f041569f9c334fa5e31134"
+
 
 
 function App() {
