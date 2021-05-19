@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
+import RecipeCard from "../../RecipeCard";
 
 import TitleCardRecipe from "../titlesCard/TitleCardRecipe";
 
@@ -11,6 +12,7 @@ function RecipePage(props) {
   const [recipe, setRecipe] = useState({});
   const [recipeInstructions, setRecipeInstructions] = useState([]);
   const [recipeIngredients, setRecipeIngredients] = useState([]);
+  const [recipeSimilar, setSimilar] = useState([])
 
   useEffect(function () {
     fetch(
@@ -47,7 +49,17 @@ function RecipePage(props) {
       });
   }, []);
 
-  // console.log(data)
+  useEffect(function () {
+    fetch(
+      `https://api.spoonacular.com/recipes/${id}/similar?number=3&apiKey=${callApiKey}`
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data, "similar-data");
+
+        setSimilar(data);
+      });
+  }, []);
 
   return (
     <div>
@@ -83,9 +95,20 @@ function RecipePage(props) {
                 <p>-{ingredient.name}</p>
               </IngredientContainer>
             );
+
           })}
         </div>
+
       </Container>
+      <SimilarSubtitle>
+        <h1>YOU MAY ALSO LIKE</h1>
+      </SimilarSubtitle>
+      <Similar>
+
+        {recipeSimilar.map(function (recipe) {
+          return (<RecipeCard title={recipe.title} image={recipe.image} id={recipe.id}></RecipeCard>)
+
+        })}</Similar>
     </div>
   );
 }
@@ -121,3 +144,21 @@ const Container = styled.div`
   padding-left: 3rem;
   padding-right: 3rem;
 `;
+const SimilarSubtitle = styled.div`
+display: flex;
+justify-content: center;
+  color: #e90b62;
+  font-size: 1rem;
+  background-color:#f6f7f8;
+  margin-top:3rem;
+
+`
+const Similar = styled.div`
+display:flex;
+justify-content:space-around;
+background-color:#f6f7f8;
+padding-top:2rem;
+
+
+
+`
