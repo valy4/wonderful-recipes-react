@@ -21,18 +21,18 @@ function Header() {
           </li>
 
           <li className="nav-item">
-            <a className="header-link" >Recipes</a>
+            <Link className="header-link" to="/recipes" >Recipes</Link>
           </li>
-          <li className="nav-item">
-            <a className="header-link" >Deserts</a>
-          </li>
+          {/* <li className="nav-item">
+            <Link className="header-link" to="/deserts">Deserts</Link>
+          </li> */}
           <li className="nav-item">
             <Link className="header-link" to="/contact" >Contact</Link>
           </li>
 
 
           <li className="nav-item-btn">
-            <button className="header-link-btn">Sign In</button>
+            <button className="header-link-btn">FavRecipes</button>
           </li>
 
         </ul>

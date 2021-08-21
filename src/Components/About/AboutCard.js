@@ -1,5 +1,6 @@
 import React from "react"
 import "../../App.css"
+import { Link } from "react-router-dom"
 
 function AboutCard(props) {
   return (
@@ -8,7 +9,7 @@ function AboutCard(props) {
       <div className="about-us-right">
         <h1>{props.title}</h1>
         <p>{props.info}</p>
-        <button className="search-btn" style={{ backgroundColor: props.btnColor }}>Find out more</button>
+        <Link to={"/AboutInfo/"}><button className="search-btn" style={{ backgroundColor: props.btnColor }}>Find out more</button></Link>
       </div>
     </div>)
 }

@@ -131,7 +131,7 @@ input {
   color: white;
   background-color: #f52878;
   cursor: pointer;
-  width: 100px;
+  width: 130px;
 }
 .header-link-btn:hover {
   background-color: #f52878;
@@ -331,4 +331,89 @@ li {
   padding-right: 100px;
   margin-top: 10px;
   margin-bottom: 50px;
+}
+@media only screen and (max-width: 480px) {
+  .box {
+    width: 10rem;
+    margin-left: 2rem;
+  }
+  .nav-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-item {
+    padding: 0.5rem;
+    font-size: 1.2rem;
+  }
+  .header-link {
+    font-size: 1.2rem;
+  }
+  .nav-item-btn {
+    margin-top: 10px;
+  }
+  .header-link-home {
+    font-size: 1.2rem;
+  }
+  .header-link-btn {
+    font-size: 1.2rem;
+    height: 30px;
+    width: 130px;
+    margin-bottom: 0.5rem;
+  }
+  .title {
+    font-size: 3rem;
+    text-align: center;
+    margin-left: 3rem;
+    margin-right: 0;
+  }
+  #search-bar {
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin-top: 0px;
+  }
+  .subtitle {
+    font-size: 2rem;
+    text-align: start;
+  }
+  .second-main-p {
+    font-size: 1rem;
+    text-align: start;
+  }
+  .photo-sign-up {
+    height: auto;
+    max-width: 70%;
+  }
+  .btn-1 {
+    width: 150px;
+  }
+  .btn-2 {
+    width: 150px;
+  }
+  .btns {
+    text-align: end;
+  }
+  footer {
+    margin-top: 150px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .footer-title {
+    text-align: center;
+  }
+  .footer-legal {
+    display: none;
+  }
+  .contact {
+    text-align: center;
+  }
+  .about-photo {
+    height: 50vh;
+  }
 }

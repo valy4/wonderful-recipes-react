@@ -16,7 +16,7 @@ function SecondMain() {
           <button className="btn-2">Learn more</button>
         </div>
       </div>
-      <img class="photo-sign-up" src={photo} />
+      <img className="photo-sign-up" src={photo} />
     </div >
   )
 

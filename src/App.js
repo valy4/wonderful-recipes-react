@@ -13,7 +13,8 @@ import SecondMain from "./Components/SecondMain"
 import About from "./Components/About/About"
 import Contact from "./Components/Contact"
 import RecipePage from "./Components/recipePage/RecipePage"
-
+import Recipes from "./Components/Recipes"
+import Deserts from "./Components/Deserts"
 
 
 
@@ -29,14 +30,22 @@ function App() {
           </Route>
           <Route path="/contact">
             <Contact />
+
           </Route>
           <Route path="/recipe/:id">
             <RecipePage />
           </Route>
+
           <Route path="/">
             <MainContent />
             <SecondMain />
           </Route>
+          <Route path="/recipes">
+            <Recipes />
+          </Route>
+          {/* <Route path="/deserts">
+            <Deserts />
+          </Route> */}
 
         </Switch>
         <Footer />
